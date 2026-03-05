@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Payment - All Things Gaming</title>
+    <style>
+        /* Payment Page Styles */
+        .payment-page {
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .payment-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .payment-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        .payment-header h1 {
+            color: #00ccff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .payment-header p {
+            color: #e0e0e0;
+            font-size: 1.1em;
+        }
+
+        .payment-container-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .order-summary, .payment-form-section {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #00ccff;
+        }
+
+        .order-summary h2, .payment-form-section h2 {
+            color: #00ccff;
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 204, 255, 0.3);
+            color: #e0e0e0;
+        }
+
+        .order-item:last-child {
+            border-bottom: none;
+        }
+
+        .order-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #00ff99;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #00ff99;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00ccff;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #00ccff;
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #00ff99;
+            box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-row-three {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+
+        .checkout-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+            margin-bottom: 15px;
+        }
+
+        .checkout-button:hover {
+            background: linear-gradient(135deg, #ff5252 0%, #ff3838 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(255, 107, 107, 0.6);
+        }
+
+        .back-button {
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 204, 255, 0.2);
+            color: #00ccff;
+            border: 2px solid #00ccff;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background: #00ccff;
+            color: #1a1a2e;
+        }
+
+        .security-badge {
+            text-align: center;
+            margin-top: 20px;
+            color: #00ff99;
+            font-size: 0.95em;
+        }
+
+        .security-badge::before {
+            content: "🔒 ";
+        }
+
+        @media (max-width: 768px) {
+            .payment-container-main {
+                grid-template-columns: 1fr;
+            }
+
+            .payment-header h1 {
+                font-size: 1.8em;
+            }
+
+            .form-row, .form-row-three {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="site-header">
+            <div class="brand">
+                <h1>All Things Gaming - Secure Checkout</h1>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">Back to Store</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="payment-page">
+            <div class="payment-wrapper">
+                <div class="payment-header">
+                    <h1>Secure Payment</h1>
+                    <p>Complete your order with our secure payment system</p>
+                </div>
+
+                <div class="payment-container-main">
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                        <h2>Order Summary</h2>
+                        <div class="order-item">
+                            <span>PlayStation 5</span>
+                            <span>$560.00</span>
+                        </div>
+                        <div class="order-item">
+                            <span>DualSense Controller</span>
+                            <span>$75.00</span>
+                        </div>
+                        <div class="order-item">
+                            <span>Gaming Headset</span>
+                            <span>$120.00</span>
+                        </div>
+                        <div class="order-item">
+                            <span>Shipping</span>
+                            <span>$15.00</span>
+                        </div>
+                        <div class="order-total">
+                            <span>Total:</span>
+                            <span>$770.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Payment Form -->
+                    <div class="payment-form-section">
+                        <h2>Payment Information</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" name="fullname" required placeholder="John Doe">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Street Address</label>
+                                <input type="text" id="address" name="address" required placeholder="123 Main Street">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" name="city" required placeholder="Chicago">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" name="state" required placeholder="IL">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="card">Card Number</label>
+                                <input type="text" id="card" name="card" required placeholder="1234 5678 9012 3456" maxlength="19">
+                            </div>
+
+                            <div class="form-row-three">
+                                <div class="form-group">
+                                    <label for="expiry">Expiration</label>
+                                    <input type="text" id="expiry" name="expiry" required placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" required placeholder="123" maxlength="4">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">ZIP Code</label>
+                                    <input type="text" id="zip" name="zip" required placeholder="60601">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="checkout-button">Complete Purchase</button>
+                            <a href="index.html" class="back-button">← Back to Store</a>
+                        </form>
+
+                        <div class="security-badge">
+                            Secure SSL Payment Gateway
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p class="phone"><a href="tel:+1-312 451 4292">Phone: +1 (312) 451-4292</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/allthingsgaming" target="_blank" class="social-link facebook">Facebook</a>
+                        <a href="https://instagram.com/allthingsgaming" target="_blank" class="social-link instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 All Things Gaming. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Format card number input
+            const cardInput = document.getElementById('card');
+            cardInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\s/g, '');
+                let formattedValue = value.replace(/(\d{4})/g, '$1 ').trim();
+                e.target.value = formattedValue;
+            });
+
+            // Format expiry date input
+            const expiryInput = document.getElementById('expiry');
+            expiryInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length >= 2) {
+                    value = value.slice(0, 2) + '/' + value.slice(2, 4);
+                }
+                e.target.value = value;
+            });
+
+            // Handle form submission
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your purchase! Your order has been processed.\n\nOrder Total: $770.00\n\nYou will receive a confirmation email shortly.');
+                // Reset form
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>

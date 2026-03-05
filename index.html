@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="styles.css">
+
+    <title>Gaming Store</title>
+    <div class="page">
+            <header class="site-header">
+                  <div class="brand">
+                        
+                        <h1>All Things Gaming, Don't Hate The Player Hate The Game</h1>
+                  </div>
+                    <nav class="site-nav">
+                            <ul>
+                                <li><a id="nav-home" href="#">Home</a></li>
+                                <li><a id="nav-games" href="#">Games</a></li>
+                                <li><a id="nav-consoles" href="#">Consoles</a></li>
+                                <li><a id="nav-accessories" href="#accessories">Accessories</a></li>
+                                <li><a id="nav-contact" href="#contact-info">Contact Us</a></li>
+                            </ul>
+                    </nav>
+            </header>
+            <main>
+            
+            <section id="home" class="hero">
+                    <h2>Welcome to All Things Gaming</h2>
+                    <p>Your one-stop shop for all things gaming. Explore our wide selection of games, consoles, and accessories.</p>
+            </section>
+
+            <section class="category-container">
+                <div class="category board-games">
+                    <h3>Board Games</h3>
+                    <p>Monopoly, Chess, Backgammon, Parcheesi, Uno, Snake and Ladder, Cards, dominoes, etc.</p>
+                </div>
+
+                <div class="category trading-cards">
+                    <h3>Trading Cards</h3>
+                    <p>Pokemon, Magic: The Gathering, Yu-Gi-Oh!, etc.</p>
+                </div>
+
+                <div class="category video-games">
+                    <h3>Video Games</h3>
+                    <p>Action, Adventure, RPG, Sports, Strategy, etc.</p>
+                </div>
+            </section>
+
+            <section class="consoles-section">
+                <h2>Gaming Consoles</h2>
+                <div class="consoles-grid">
+                    <div class="console" id="console-playstation">
+                        <h3>PlayStation</h3>
+                        <p>PS5 $560.00</p>
+                        <p>PS4 $350.00</p>
+                        <p>PS3 $230.00</p>
+                        <p>PS2 $180.00</p>
+                        <p>PS1 $100.00</p>
+                    </div>
+                    <div class="console" id="console-xbox">
+                        <h3>Xbox</h3>
+                        <p>Xbox Series X $500.00</p>
+                        <p>Xbox Series S $300.00</p>
+                        <p>Xbox One X $400.00</p>
+                        <p>Xbox One S $250.00</p>
+                        <p>Xbox 360 $150.00</p>
+                    </div>
+                    <div class="console" id="console-nintendo">
+                        <h3>Nintendo Switch</h3>
+                        <p>Nintendo Switch $300.00</p>
+                        <p>Nintendo Switch Lite $200.00</p>
+                        <p>Nintendo Switch OLED $350.00</p>
+                    </div>
+                </div>
+            </section>   
+
+            <section id="accessories" class="accessories-section">
+                <h2>Gaming Accessories</h2>
+                <div class="accessories-grid">
+                    <div class="accessory-card">
+                        <h3>Controllers</h3>
+                        <p>DualSense Controller</p>
+                        <p>Xbox Wireless Controller</p>
+                        <p>Switch Pro Controller</p>
+                        <p>Gaming Memory Cards</p>
+                        <p>External Hard Drives</p>
+                    </div>
+                    <div class="accessory-card">
+                        <h3>Headsets</h3>
+                        <p>Wireless Gaming Headset</p>
+                        <p>Noise-Canceling Headset</p>
+                        <p>Surround Sound Headset</p>
+                        <p>HDMI Cables</p>
+                        <p>High Refresh Rate Monitors</p>
+                    </div>
+                    <div class="accessory-card">
+                        <h3>Other Accessories</h3>
+                        <p>Charging Dock</p>
+                        <p>Console Stand</p>
+                        <p>Screen Protector</p>
+                        <p>Gaming Chairs</p>
+                        <p>Gaming Desks</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="animated-consoles-container">
+                <div class="console-animator">
+                    <div class="floating-console playstation-box" data-console="playstation">
+                        <div class="console-icon playstation-icon">
+                            <span>PlayStation</span>
+                        </div>
+                    </div>
+                    <div class="floating-console xbox-box" data-console="xbox">
+                        <div class="console-icon xbox-icon">
+                            <span>Xbox</span>
+                        </div>
+                    </div>
+                    <div class="floating-console nintendo-box" data-console="nintendo">
+                        <div class="console-icon nintendo-icon">
+                            <span>Nintendo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="payment-section">
+                <div class="payment-container">
+                    <h2>Ready to Check Out?</h2>
+                    <p>Browse our selection and proceed to secure checkout</p>
+                    <a href="payment.html" class="payment-button">Go to Payment</a>
+                </div>
+            </section>
+             
+            <footer id="contact-info" class="site-footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Contact Us</h4>
+                        <p class="phone"><a href="tel:+1-312 451 4292">Phone: +1 (312) 451-4292</a></p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="https://facebook.com/allthingsgaming" target="_blank" class="social-link facebook">Facebook</a>
+                            <a href="https://instagram.com/allthingsgaming" target="_blank" class="social-link instagram">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 All Things Gaming. All rights reserved.</p>
+                </div>
+            </footer>
+            </main>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const homeLink = document.getElementById('nav-home');
+            const gamesLink = document.getElementById('nav-games');
+            const consoesLink = document.getElementById('nav-consoles');
+            const accessoriesLink = document.getElementById('nav-accessories');
+            const contactLink = document.getElementById('nav-contact');
+            const homeSection = document.getElementById('home');
+            const gamesSection = document.querySelector('.category-container');
+            const consoesSection = document.querySelector('.consoles-section');
+            const accessoriesSection = document.getElementById('accessories');
+            const contactSection = document.getElementById('contact-info');
+            const animatedConsoles = document.querySelectorAll('.floating-console');
+
+            function showSection(activeSection) {
+                [homeSection, gamesSection, consoesSection, accessoriesSection].forEach(section => {
+                    if (section) section.style.display = 'none';
+                });
+                if (activeSection) activeSection.style.display = 'block';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            function filterConsole(consoleType) {
+                const consoleCards = document.querySelectorAll('.console');
+                consoleCards.forEach(card => {
+                    card.style.display = 'none';
+                });
+                
+                let selectedId = '';
+                if (consoleType === 'playstation') selectedId = 'console-playstation';
+                else if (consoleType === 'xbox') selectedId = 'console-xbox';
+                else if (consoleType === 'nintendo') selectedId = 'console-nintendo';
+                
+                if (selectedId) {
+                    const selected = document.getElementById(selectedId);
+                    if (selected) selected.style.display = 'block';
+                }
+            }
+
+            function showAllConsoles() {
+                const consoleCards = document.querySelectorAll('.console');
+                consoleCards.forEach(card => {
+                    card.style.display = 'block';
+                });
+            }
+
+            if (homeLink) {
+                homeLink.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    [homeSection, gamesSection, consoesSection, accessoriesSection].forEach(section => {
+                        if (section) section.style.display = 'block';
+                    });
+                    showAllConsoles();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            if (gamesLink) {
+                gamesLink.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    showSection(gamesSection);
+                });
+            }
+
+            if (consoesLink) {
+                consoesLink.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    showAllConsoles();
+                    showSection(consoesSection);
+                });
+            }
+
+            if (accessoriesLink) {
+                accessoriesLink.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    showSection(accessoriesSection);
+                });
+            }
+
+            if (contactLink) {
+                contactLink.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            }
+
+            animatedConsoles.forEach(consoleElement => {
+                consoleElement.addEventListener('click', function () {
+                    const consoleType = this.getAttribute('data-console');
+                    showSection(consoesSection);
+                    filterConsole(consoleType);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
